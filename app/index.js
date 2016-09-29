@@ -3,15 +3,15 @@ var chalk = require('chalk'); //不同颜色的info
 var util = require('util');
 var yeoman = require('yeoman-generator');
 var yosay = require('yosay'); //yeoman弹出框
-var Reactpack = yeoman.Base.extend({
+var ReactpackSample = yeoman.Base.extend({
     info: function () {
         this.log(chalk.green(
             'I am going to build your app!'
         ));
     },
     generateBasic: function () {
-        this.direcotry('src', 'src');
-        this.direcotry('data', 'data');
+        this.directory('src', 'src');
+        this.directory('data', 'data');
         this.copy('package.json', 'package.json') //拷贝文件
         this.copy('index.html', 'index.html');
         this.copy('README.md', "README.md");
@@ -22,7 +22,7 @@ var Reactpack = yeoman.Base.extend({
         this.destinationPath('./')
     },
     install: function() {
-        this.installDependecies({
+        this.installDependencies({
             skipInstall: this.options['skip-install']
         });
     },
@@ -32,4 +32,4 @@ var Reactpack = yeoman.Base.extend({
         ));
     }
 });
-module.exports = Reactpack;
+module.exports = ReactpackSample;

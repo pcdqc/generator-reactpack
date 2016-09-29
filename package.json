@@ -1,6 +1,6 @@
 {
   "name": "generator-reactpackSample",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "react es6 yeoman",
   "main": "index.js",
   "scripts": {
